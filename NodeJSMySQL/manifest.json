@@ -1,6 +1,6 @@
 {
   "runtime":{
-    "majorVersion":"6"
+    "majorVersion":"7"
   },
   "command": "node index.js",
   "release": {},

@@ -7,7 +7,7 @@ const mysql = require('mysql');
 const hbs = require('hbs');
 
 //Global Variables
-var PORT = process.env.PORT || 8089;
+var PORT = process.env.PORT;
 
 //Express middleware
 //hbs.registerPartials(__dirname + '/views/partials'); // For reuseable hbs partials hearder/footer etc
@@ -85,23 +85,15 @@ app.get('/employees/',(req,res)=>{
     });
 
   }
-
-
  }
-
   }); 
+  
   connection.end();
 
-
- 
-
 });
-
-
 
 //**** For some reason this function when used - results in error in deploying on ACCS */
-app.listen(PORT, ()=> {
-    console.log('Server started on Port', PORT); 
+app.listen(PORT, function () {
+    console.log('listening on port ' + PORT)
+
 });
-
-
